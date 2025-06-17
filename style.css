@@ -16,3 +16,8 @@ body{
     margin-left: 18%;
     text-align: left;
 }
+
+.checked{
+    text-decoration: line-through;
+    color: rgba(31, 28, 28, 0.515);
+}
