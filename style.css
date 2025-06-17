@@ -13,11 +13,11 @@ body{
 }
 
 #tasks{
-    margin-left: 18%;
+    margin-left: 30%;
     text-align: left;
 }
 
 .checked{
     text-decoration: line-through;
-    color: rgba(31, 28, 28, 0.515);
+    color: rgba(41, 39, 39, 0.515);
 }

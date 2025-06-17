@@ -17,12 +17,22 @@ const addTask = () => {
   inputField.value = "";
 
   const checkbox = li.querySelector("input");
-//   console.log(checkbox);
+  let span1= li.querySelectorAll("span")[0];
+  const editBtn = li.querySelector(".editBtn");
+//   console.log(editBtn);
 checkbox.addEventListener("click", () =>{
-   let span1= li.querySelectorAll("span")[0];
    span1.classList.toggle("checked");
 //    console.log(span1);
    
+})
+
+editBtn.addEventListener("click", () =>{
+    let taskUpdate = prompt("éditez tâche:", span1.textContent);
+    if (taskUpdate !== null) {
+        span1.textContent = taskUpdate;
+        checkbox.checked = false;
+        span1.classList.remove("checked");
+    };
 })
   
 };
