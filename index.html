@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1>Le gestionnaire de tâches</h1>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          class="inputField"
+          id="inputField"
+          placeholder="Ajouter une tâche"
+        />
+        <button id="addBtn">Ajouter</button>
+      </div>
+
+      <h2>Mes listes de tâches</h2>
+
+      <hr />
+
+      <div class="filters">
+        <span class="active" id="all">Toutes <span id="allCounter">3</span></span>
+        <span id="all">En attentes <span id="pendingCounter">2</span></span>
+        <span id="completed">Terminées <span id="completedCounter">1</span></span><br>
+        <br><button>Supprimer tous</button>
+      </div>
+
+      <hr />
+
+      <ul id="tasks">
+        <li>
+          <label>
+            <input type="checkbox" />
+            <span>Appeler maman</span>
+          </label>
+          <span class="editBtn" title="Modifier"><i class="fa-solid fa-pen-to-square"></i></span>
+          <span class="deleteBtn" title="Supprimer"><i class="fa-solid fa-trash"></i></span>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" />
+            <span>Faire les courses</span>
+          </label>
+          <span class="editBtn" title="Modifier"><i class="fa-solid fa-pen-to-square"></i></span>
+          <span class="deleteBtn" title="Supprimer"><i class="fa-solid fa-trash"></i></span>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" />
+            <span>Terminer mon travail</span>
+          </label>
+          <span class="editBtn" title="Modifier"><i class="fa-solid fa-pen-to-square"></i></span>
+          <span class="deleteBtn" title="Supprimer"><i class="fa-solid fa-trash"></i></span>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" />
+            <span>Reviser les cours</span>
+          </label>
+          <span class="editBtn" title="Modifier"><i class="fa-solid fa-pen-to-square"></i></span>
+          <span class="deleteBtn" title="Supprimer"><i class="fa-solid fa-trash"></i></span>
+        </li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>Copyrighr &copy;  tous droits réservés</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

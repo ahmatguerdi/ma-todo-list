@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+    margin-top: 5%;
+}
+
+#container{
+    background-color: antiquewhite;
+    margin: 0 auto;
+    padding: 15px;
+    width: 30%;
+    border: 2.5mm ridge rgba(50, 138, 220, 0.6);
+    border-radius: 20px;
+}
+
+#tasks{
+    margin-left: 25%;
+    text-align: left;
+}
