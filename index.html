@@ -20,13 +20,15 @@
       </div>
 
       <div>
-        <input
+        <form action="">
+          <input
           type="text"
           class="inputField"
           id="inputField"
           placeholder="Ajouter une tâche"
-        />
-        <button id="addBtn" onclick="addTask()">Ajouter</button>
+        required/>
+        <button id="addBtn" onclick="addTask()" type="submit">Ajouter</button>
+        </form>
       </div>
 
       <h2>Mes listes de tâches</h2>
@@ -34,10 +36,10 @@
       <hr />
 
       <div class="filters">
-        <span class="active" id="all">Toutes <span id="allCounter"> 3</span></span>
-        <span id="all">En attentes <span id="pendingCounter"> 2</span></span>
+        <span class="active" id="all">Toutes <span id="allCounter"></span></span>
+        <span id="all">En attentes <span id="pendingCounter"></span></span>
         <span id="completed">Terminées <span id="completedCounter"></span></span><br />
-        <br /><button>Supprimer tous</button>
+        <br /><button id="delete">Supprimer tous</button>
       </div>
 
       <hr />
@@ -48,12 +50,8 @@
             <input type="checkbox" required />
             <span class="checked">Appeler maman</span>
           </label>
-          <span class="editBtn" title="Modifier"
-            ><i class="fa-solid fa-pen-to-square"></i
-          ></span>
-          <span class="deleteBtn" title="Supprimer"
-            ><i class="fa-solid fa-trash"></i
-          ></span>
+          <span class="editBtn" title="Modifier"><i class="fa-solid fa-pen-to-square"></i></span>
+          <span class="deleteBtn" title="Supprimer"><i class="fa-solid fa-trash"></i></span>
         </li>
         <li>
           <label>

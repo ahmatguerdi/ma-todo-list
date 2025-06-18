@@ -4,10 +4,13 @@ let tasks = document.getElementById("tasks");
 
 const addTask = () => {
   let task = inputField.value.trim();
+  if (task === "" || task === null) {
+    return;
+  }
   const li = document.createElement("li");
   li.innerHTML = `
   <label>
-    <input type="checkbox" />
+    <input type="checkbox" / required>
     <span>${task}</span>
   </label>
   <span class="editBtn" title="Modifier"><i class="fa-solid fa-pen-to-square"></i></span>
@@ -24,12 +27,14 @@ const addTask = () => {
   checkbox.addEventListener("click", () => {
     span1.classList.toggle("checked");
     counter();
-    //    console.log(span1);
   });
 
   editBtn.addEventListener("click", () => {
     let taskUpdate = prompt("éditez tâche:", span1.textContent);
-    if (taskUpdate !== null) {
+    if (taskUpdate === "" || taskUpdate === null) {
+      alert("Vous devez reseigner le champ");
+      taskUpdate = prompt("éditez tâche:", span1.textContent);
+      span1.textContent = taskUpdate;
       span1.textContent = taskUpdate;
       checkbox.checked = false;
       span1.classList.remove("checked");
@@ -39,15 +44,32 @@ const addTask = () => {
 
   deleteBtn.addEventListener("click", () => {
     if (window.confirm("Êtes-vous sûr ?")) {
-      tasks.removeChild(li);
+      li.remove();
     }
+    counter();
   });
-  
+
+  counter();
 };
 
 const counter = () => {
   let completedTasks = document.querySelectorAll(".checked").length;
   let counters = document.getElementById("completedCounter");
   counters.textContent = completedTasks;
-}
+
+  const taches = document.querySelectorAll("li > label > span:not(.checked)").length;
+  document.querySelector("#pendingCounter").textContent = taches;
+  document.querySelector("#allCounter").textContent = taches + completedTasks;
+
+  const delet = document.querySelector("#delete");
+
+  delet.addEventListener("click", () => {
+    if (window.confirm("Êtes-vous sûr ?")) {
+      tasks.innerHTML = "";
+      return;
+    }
+    counter();
+  });
+};
 counter();
+
